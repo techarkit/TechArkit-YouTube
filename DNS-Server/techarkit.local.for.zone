@@ -1,0 +1,11 @@
+$TTL 1D
+@       IN SOA server.techarkit.local. root.server.techarkit.local. (
+                                        0       ; serial
+                                        1D      ; refresh
+                                        1H      ; retry
+                                        1W      ; expire
+                                        3H )    ; minimum
+        NS      server.techarkit.local
+server  A       192.168.2.43
+server.techarkit.local  A       192.168.2.43
+client  A       192.168.2.49
