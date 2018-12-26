@@ -19,3 +19,6 @@ Tech Arkit Youtube channel Provides you Information Technology related technical
 - So many other tutorial
 
 Find the command line help here. We will update all the commands used in videos.
+
+[DNS Server in Linux - Video](https://youtu.be/B6RprjoOdk4)
+- [Config File](https://github.com/techtutorials/TechArkit-YouTube/tree/master/DNS-Server)
