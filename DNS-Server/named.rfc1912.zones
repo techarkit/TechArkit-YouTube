@@ -1,0 +1,41 @@
+zone "localhost.localdomain" IN {
+        type master;
+        file "named.localhost";
+        allow-update { none; };
+};
+
+zone "localhost" IN {
+        type master;
+        file "named.localhost";
+        allow-update { none; };
+};
+
+zone "techarkit.local" IN {
+        type master;
+        file "techarkit.local.for.zone";
+        allow-update { none; };
+};
+
+zone "1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.ip6.arpa" IN {
+        type master;
+        file "named.loopback";
+        allow-update { none; };
+};
+
+zone "1.0.0.127.in-addr.arpa" IN {
+        type master;
+        file "named.loopback";
+        allow-update { none; };
+};
+
+zone "2.168.192.in-addr.arpa" IN {
+        type master;
+        file "techarkit.local.rev.zone";
+        allow-update { none; };
+};
+
+zone "0.in-addr.arpa" IN {
+        type master;
+        file "named.empty";
+        allow-update { none; };
+};
