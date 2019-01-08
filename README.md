@@ -3,7 +3,7 @@
 Tech Arkit Youtube channel Provides you Information Technology related technical videos Like.
 
 
-** Follow Us on Social Networking Sites **
+**Follow Us on Social Networking Sites**
 * [Facebook](https://www.facebook.com/Linuxarkit/)
 * [Email List](https://feedburner.google.com/fb/a/mailverify?uri=arkit)
 * [Linkedin](https://in.linkedin.com/in/ravi-kumar-94530121)
