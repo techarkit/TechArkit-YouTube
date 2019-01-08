@@ -22,3 +22,21 @@ Find the command line help here. We will update all the commands used in videos.
 
 [DNS Server in Linux - Video](https://youtu.be/B6RprjoOdk4)
 - [DNS Server Config File](https://github.com/techtutorials/TechArkit-YouTube/tree/master/DNS-Server)
+# yum install bind* -y
+# systemctl enable named-chroot.service
+# systemctl start named-chroot.service
+# systemctl enable named-chroot.service
+# systemctl start named-chroot.service
+
+First edit [named.conf](https://github.com/techtutorials/TechArkit-YouTube/blob/master/DNS-Server/named.conf)
+Next Edit [named.rfc1912.zones](https://github.com/techtutorials/TechArkit-YouTube/blob/master/DNS-Server/named.rfc1912.zones)
+Forward Lookup Zone File [techarkit.local.for.zone](https://github.com/techtutorials/TechArkit-YouTube/blob/master/DNS-Server/techarkit.local.for.zone)
+Reverse Lookup Zone File [techarkit.rev.zone](https://github.com/techtutorials/TechArkit-YouTube/blob/master/DNS-Server/techarkit.local.rev.zone)
+
+Verify Named configuration using below command
+# /usr/sbin/named-checkconf -z /etc/named.conf
+# named-checkzone server.techarkit.local techarkit.for.zone
+# named-checkzone server.techarkit.local techarkit.rev.zone
+
+
+
