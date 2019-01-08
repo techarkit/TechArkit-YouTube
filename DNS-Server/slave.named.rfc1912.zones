@@ -1,0 +1,11 @@
+zone "techarkit.local" IN {
+        type slave;
+        file "slaves/techarkit.for.local";
+        masters { 192.168.2.43; };
+};
+
+zone "2.168.192.in-addr.arpa" IN {
+        type slave;
+        file "slaves/techarkit.rev.local";
+        masters { 192.168.2.43; };
+};
