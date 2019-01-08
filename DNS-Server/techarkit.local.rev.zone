@@ -5,7 +5,13 @@ $TTL 1D
                                         1H      ; retry
                                         1W      ; expire
                                         3H )    ; minimum
-        NS      server.techarkit.local.
+  ;Name Servers
+@       IN NS   server.techarkit.local.
+@       IN NS   slave.techarkit.local.
+@       IN PTR  techarkit.local.
+  ;Name Servers Hostname to IP Address
+@       IN      A       192.168.2.43
+@       IN      A       192.168.2.49
+  ;Domain records
 43      PTR     server.techarkit.local.
-43      PTR     techarkit.local.
-49      PTR     client.techarkit.local.
+49      PTR     slave.techarkit.local.
