@@ -40,4 +40,37 @@ Answer database config
 `flush privileges;`
 `exit;`
 
+## Install Zabbix Packages ##
+`yum install zabbix-server-mysq; zabbix-web-mysql zabbix-agent zabbix-apache-conf zabbix-java-gateway -y`
 
+`systemctl enable zabbix-server; systemctl enable zabbix-agent;`
+`systemctl start zabbix-server;`
+`systemctl start zabbix-agent;`
+
+`cd /usr/share/doc/zabbix-server-mysql-4.0.25/`
+`zcat create.sql.gz | mysql -u zabbix -pzabbix zabbix`
+
+## Edit Config file and verify below values ##
+`vim /etc/zabbix/zabbix_server.conf`
+LogFile=/var/log/zabbix/zabbix_server.log
+LogFileSize=0
+PidFile=/var/run/zabbix/zabbix_server.pid
+SocketDir=/var/run/zabbix
+DBHost=localhost
+DBName=zabbix
+DBUser=zabbix
+DBPassword=zabbix
+DBPort=3066
+SNMPTrapperFile=/var/log/snmptrap/snmptrap.log
+Timeout=4
+AlertScriptsPath=/usr/lib/zabbix/alertscripts
+ExternalScripts=/usr/lib/zabbix/externalscripts
+LogSlowQueries=3000
+
+`systemctl restart zabbix-server`
+`systemctl restart httpd`
+
+http://zabbix-server-ip/zabbix
+
+Complete setup
+Done!
