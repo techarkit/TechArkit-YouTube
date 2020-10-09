@@ -52,29 +52,29 @@ Answer database config
 
 ## Edit Config file and verify below values ##
 - `vim /etc/zabbix/zabbix_server.conf`
-LogFile=/var/log/zabbix/zabbix_server.log
-LogFileSize=0
-PidFile=/var/run/zabbix/zabbix_server.pid
-SocketDir=/var/run/zabbix
-DBHost=localhost
-DBName=zabbix
-DBUser=zabbix
-DBPassword=zabbix
-DBPort=3066
-SNMPTrapperFile=/var/log/snmptrap/snmptrap.log
-Timeout=4
-AlertScriptsPath=/usr/lib/zabbix/alertscripts
-ExternalScripts=/usr/lib/zabbix/externalscripts
-LogSlowQueries=3000
+- LogFile=/var/log/zabbix/zabbix_server.log
+- LogFileSize=0
+- PidFile=/var/run/zabbix/zabbix_server.pid
+- SocketDir=/var/run/zabbix
+- DBHost=localhost
+- DBName=zabbix
+- DBUser=zabbix
+- DBPassword=zabbix
+- DBPort=3066
+- SNMPTrapperFile=/var/log/snmptrap/snmptrap.log
+- Timeout=4
+- AlertScriptsPath=/usr/lib/zabbix/alertscripts
+- ExternalScripts=/usr/lib/zabbix/externalscripts
+- LogSlowQueries=3000
 
 - `systemctl restart zabbix-server`
 - `systemctl restart httpd`
 
 http://zabbix-server-ip/zabbix
 
-Complete setup
-Done!
+- Complete setup
+- Done!
 
-Default Zabbix Credentails
-UserName: Admin
-Password: zabbix
+- Default Zabbix Credentails
+- UserName: Admin
+- Password: zabbix
