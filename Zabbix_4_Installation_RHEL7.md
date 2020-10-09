@@ -1,6 +1,6 @@
 ## Disable SELinux ##
-`vi /etc/selinux/config`
-`SELINUX=disabled`
+- `vi /etc/selinux/config`
+- `SELINUX=disabled`
 
 #Save&Exit
 `setenforce 0`
