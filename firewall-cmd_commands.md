@@ -1,0 +1,42 @@
+## firewall-cmd command examples ##
+
+- yum install firewall-config firewalld-filesystem python3-firewall -y
+- systemctl disable iptables
+- systemctl disable ip6tables
+- systemctl stop ip6tables
+- systemctl stop iptables
+- systemctl mask ip6tables
+- systemctl mask iptables
+- systemctl status iptables
+- systemctl status ip6tables
+- yum install -y firewalld firewall-config
+- systemctl status firewalld
+- systemctl enable firewalld.service
+- systemctl start firewalld.service
+- firewall-cmd --get-default-zone
+- firewall-cmd --set-default-zone=home
+- firewall-cmd --get-default-zone
+- firewall-cmd --get-active-zones
+- firewall-cmd --version
+- firewall-cmd --zone=public --list-interfaces
+- firewall-cmd --add-interface=eth0 --zone=public
+- firewall-cmd --remove-interface=eth0 --zone=public
+- firewall-cmd --get-services
+- firewall-cmd --permanent --get-services
+- firewall-cmd --panic-on    [Disable incoming and out going packets]
+- firewall-cmd --panic-off   [Enable incoming out going packets]
+- firewall-cmd --query-panic  [check panic mode is enabled or disabled]
+- firewall-cmd --list-all  [List all open ports, services and all]
+- firewall-cmd --zone=public --list-ports  
+- firewall-cmd --permanent --add-port=22/tcp  
+- firewall-cmd --permanent --zone=public --add-port=22/tcp 
+- firewall-cmd --zone=public --list-ports  
+- firewall-cmd --permanent --remove-port=22/tcp  
+- firewall-cmd --list-services 
+- firewall-cmd --list-services --zone=public 
+- firewall-cmd --permanent --zone=public --add-service=http   
+- firewall-cmd --permanent --add-service=https  
+- firewall-cmd --list-services --zone=public 
+- cat /etc/firewalld/zones/public.xml
+- firewall-cmd --permanent --add-rich-rule "rule family=ipv4 source address=192.168.4.0/24 forward-port port=2080 protocol=tcp to-port=80"
+- firewall-cmd --reload
