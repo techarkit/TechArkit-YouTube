@@ -18,4 +18,4 @@ buildah commit --format docker centos-working-container firstbuildah:latest
 buildah images
 podman save -o mybuild1.tar localhost/hello2latest
 podman rmi 638d3f915ea2 –f
-podman load -i mybuild1.tar```
+podman load -i mybuild1.tar
