@@ -18,4 +18,22 @@ buildah commit --format docker centos-working-container firstbuildah:latest
 buildah images
 podman save -o mybuild1.tar localhost/hello2latest
 podman rmi 638d3f915ea2 –f
-podman load -i mybuild1.tar
+podman load -i mybuild1.tar```
+
+# Building container image from scratch
+buildah from scratch
+container1=$(buildah mount working-container)
+yum install --installroot $container1 bash coreutils --releasever 8 --setopt install_weak_deps=false
+yum clean all --installroot $container1
+buildah config --cmd /bin/bash working-container
+buildah config --label name=baseimage working-container
+buildah umount working-container
+buildah commit working-container baseimage
+buildah images
+podman inspect localhost/baseimage
+podman run --rm -it localhost/baseimage /bin/bash
+
+
+## Clean up ##
+buildah rm working-container
+buildah rmi working-container
