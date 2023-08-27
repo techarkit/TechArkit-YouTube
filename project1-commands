@@ -30,3 +30,24 @@ $db = "intel";
 // Create connection
 
 :wq!
+
+
+sudo mysql -h <EndPoint> -u admin -p
+mysql> use intel;
+Database changed
+
+mysql> show tables;
++-----------------+
+| Tables_in_intel |
++-----------------+
+| data            |
++-----------------+
+1 row in set (0.01 sec)
+
+mysql> select * from data;
++-----------+----------------+
+| firstname | email          |
++-----------+----------------+
+| Ravi      | Testi@gmai.com |
++-----------+----------------+
+1 row in set (0.01 sec)
