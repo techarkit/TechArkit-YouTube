@@ -10,3 +10,9 @@ rm -rf index.html
 sudo add-apt-repository -y ppa:ondrej/php
 sudo apt install php5.6 mysql-client php5.6-mysqli -y
 sudo mysql -h <EndPoint> -u admin -p
+
+mysql> show databases;
+mysql> use intel;
+mysql> create table data(firstname varchar(21),email varchar(21));
+Query OK, 0 rows affected (0.02 sec)
+mysql> quit;
