@@ -9,3 +9,4 @@ cd /var/www/html/
 rm -rf index.html 
 sudo add-apt-repository -y ppa:ondrej/php
 sudo apt install php5.6 mysql-client php5.6-mysqli -y
+sudo mysql -h <EndPoint> -u admin -p
