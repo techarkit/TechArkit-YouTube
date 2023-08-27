@@ -1,12 +1,12 @@
-apt-get update -y
-apt-get install apache2 -y
-systemctl enable apache2
-systemctl start apache2
+sudo apt-get update -y
+sudo apt-get install apache2 -y
+sudo systemctl enable apache2
+sudo systemctl start apache2
 git clone https://github.com/awsvishwas/awsproject1.git project1
 cd project1/
-mv * /var/www/html/
+sudo mv * /var/www/html/
 cd /var/www/html/
-rm -rf index.html 
+sudo rm -rf index.html 
 sudo add-apt-repository -y ppa:ondrej/php
 sudo apt install php5.6 mysql-client php5.6-mysqli -y
 sudo mysql -h <EndPoint> -u admin -p
@@ -18,7 +18,7 @@ Query OK, 0 rows affected (0.02 sec)
 mysql> quit;
 
 cd /var/www/html
-vim index.php
+sudo vim /var/www/html/index.php
 
 ## Line Number 29
 $firstname=$_POST['firstname'];
