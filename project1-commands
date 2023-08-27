@@ -16,3 +16,17 @@ mysql> use intel;
 mysql> create table data(firstname varchar(21),email varchar(21));
 Query OK, 0 rows affected (0.02 sec)
 mysql> quit;
+
+cd /var/www/html
+vim index.php
+
+## Line Number 29
+$firstname=$_POST['firstname'];
+$email=$_POST['email'];
+$servername = "ENDPOINT_URL";
+$username = "admin";
+$password = "PASSWORD_HERE";
+$db = "intel";
+// Create connection
+
+:wq!
